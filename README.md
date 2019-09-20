@@ -10,5 +10,7 @@ Conjugate
 Conversion from double to Complex
 Conversion from int to Complex
 Conversion from Complex to double
+Multiplication
+Division
 
 Help with creating more methods and/or a test class for existing methods would be appreciated
