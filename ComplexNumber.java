@@ -1,5 +1,6 @@
 /**
- * Represents mathematical complex numbers of the form a + bi
+ * Represents mathematical complex numbers of the form a + bi,
+ * where a and b are both doubles
  */
 public class Complex()
 {
@@ -30,6 +31,19 @@ public class Complex()
          this.a = a;
          this.b = b;
      }
+    
+    /**,
+     * Adds two complex numbers
+     * 
+     * @param addend1 the first number
+     * @param addend2 the second number
+     * @return the sum of the two complex numbers
+     */
+    public Complex add(Complex addend1, Complex addend2)
+    {
+        //need to implement
+        return new Complex();
+    }
     
     
 }
