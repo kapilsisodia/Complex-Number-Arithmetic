@@ -202,13 +202,22 @@ public class Complex()
     }
     
     /**
+     * Returns true if the imaginary part is zero, false otherwise
+     * @return true if the number is real
+     */
+    public boolean isReal()
+    {
+        return (Math.abs(this.imag()) < 0.000001);
+    }
+    
+    /**
      * Converts a Complex to a double (imaginary part must be zero!)
      * @throws IllegalArgumentException
      * @return the converted Complex
      */
     public double toDouble()
     {
-        if (Math.abs(this.imag()) < 0.000001)
+        if (!this.isReal())
         {
             throw new IllegalArgumentException();
         }
