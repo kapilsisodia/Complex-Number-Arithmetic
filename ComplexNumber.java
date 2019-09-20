@@ -1,6 +1,10 @@
+import java.lang.Math;
+
 /**
  * Represents mathematical complex numbers of the form a + bi,
  * where a and b are both doubles
+ * @author kenneth
+ * @version 9/20/29
  */
 public class Complex()
 {
@@ -94,24 +98,44 @@ public class Complex()
     }
     
     /**
-     * Tests if two complex numbers are equal
+     * Tests if a complex number equals another object
+     * @param other the other object
      * @return true if both real and imaginary
      * parts match, false otherwise
      */
-    public boolean equals(complex2)
+    public boolean equals(Object other)
     {
-        //need to implement
-        return false;
+        if (other == null)
+        {
+            return false;
+        }
+        else if (this.getClass() != other.getClass())
+        {
+            return false;
+        }
+        else if (this == other)
+        {
+            return true;
+        }
+        else if ((Math.abs(this.real() - ((Complex) other).real()) < 0.000001) &&
+                 Math.abs(this.imag() - ((Complex) imag).real()) < 0.000001))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
     
     /**,
      * Adds two complex numbers
      * 
-     * @param addend1 the first number
-     * @param addend2 the second number
+     * @param first the first number
+     * @param second the second number
      * @return the sum of the two complex numbers
      */
-    public Complex add(Complex addend1, Complex addend2)
+    public Complex add(Complex first, Complex second)
     {
         //need to implement
         return new Complex();
