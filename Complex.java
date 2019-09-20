@@ -227,5 +227,28 @@ public class Complex()
         }
     }
     
-    
+    /**
+     * Multiplies two complex numbers
+     * 
+     * @param second the second number
+     * @return the product of the two complex numbers
+     */
+    public Complex multiply(Complex second)
+    {
+        double productReal = this.real() * second.real() - this.imag() * second.imag();
+        double productImag = this.real() * second.imag() + this.imag() * second.real();
+        return new Complex(productReal, productImag);
+        
+    /**
+     * Divides two complex numbers
+     * 
+     * @param second the second number
+     * @return the quotient of the two complex numbers
+     */
+    public Complex divide(Complex second)
+    {
+        Complex numerator = this.multiply(second.conj());
+        double denominator = second.mag() * second.mag();
+        return new Complex(numerator.real() / denominator, numerator.imag() / denominator);
+    }
 }
