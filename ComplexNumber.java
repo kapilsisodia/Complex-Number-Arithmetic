@@ -201,5 +201,22 @@ public class Complex()
         return new Complex((double) int, 0);
     }
     
+    /**
+     * Converts a Complex to a double (imaginary part must be zero!)
+     * @throws IllegalArgumentException
+     * @return the converted Complex
+     */
+    public double toDouble()
+    {
+        if (Math.abs(this.imag()) < 0.000001)
+        {
+            throw new IllegalArgumentException();
+        }
+        else()
+        {
+            return this.a;
+        }
+    }
+    
     
 }
