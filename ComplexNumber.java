@@ -163,5 +163,43 @@ public class Complex()
         return conjugate;
     }
     
+    /**
+     * Finds the magnitude of a complex number
+     * @return magnitude (double)
+     */
+    public double mag()
+    {
+        return Math.sqrt(a * a + b * b);
+    }
+    
+    /**
+     * Finds the magnitude of a complex number
+     * @return magnitude (Complex)
+     */
+    public double magAsComplex()
+    {
+        return new Complex(Math.sqrt(a * a + b * b), 0);
+    }
+    
+    /**
+     * Converts a double to a Complex
+     * @param the original double
+     * @return a Complex equivalent to the double
+     */
+    public static Complex toComplex(double double) //haha
+    {
+        return new Complex(double, 0);
+    }
+    
+    /**
+     * Converts an int to a Complex
+     * @param the original int
+     * @return a Complex equivalent to the int
+     */
+    public static Complex toComplex(int int)
+    {
+        return new Complex((double) int, 0);
+    }
+    
     
 }
