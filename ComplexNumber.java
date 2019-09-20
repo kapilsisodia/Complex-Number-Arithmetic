@@ -131,14 +131,36 @@ public class Complex()
     /**,
      * Adds two complex numbers
      * 
-     * @param first the first number
      * @param second the second number
      * @return the sum of the two complex numbers
      */
-    public Complex add(Complex first, Complex second)
+    public Complex add(Complex second)
     {
-        //need to implement
-        return new Complex();
+        Complex sum = new Complex(this.real() + second.real(), this.imag() + second.imag());
+        return sum;
+    }
+    
+    /**,
+     * Subtractss two complex numbers
+     * 
+     * @param second the second number
+     * @return the difference of the two complex numbers
+     */
+    public Complex subtract(Complex second)
+    {
+        Complex difference = new Complex(this.real() - second.real(), this.imag() - second.imag());
+        return difference;
+    }
+    
+    /**,
+     * finds the conjugate of a complex number
+     * 
+     * @return the conjugate of this number
+     */
+    public Complex conj()
+    {
+        Complex conjugate = new Complex(this.real(), (-1) * this.imag());
+        return conjugate;
     }
     
     
